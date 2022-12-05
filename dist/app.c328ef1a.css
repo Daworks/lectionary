@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url(/pattern.71d0b4de.jpg) repeat;
+  /*background: -webkit-linear-gradient(to top, #bdb5fa, #cccff8);  !* Chrome 10-25, Safari 5.1-6 *!
+  background: linear-gradient(to top, #bdb5fa, #cccff8); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+}
+
+#lectionary {
+  border: 4px solid #eee;
+  padding: 1em;
+  border-radius: 20px;
+  margin: 2em auto;
+  width: 100%;
+  max-width: 1024px;
+  color: #252a37;
+  background-color: white;
+  font-family: "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  box-sizing: border-box;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 768px) {
+  #lectionary {
+    margin: 1em 0;
+    padding: 0.4em;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+#lectionary a {
+  color: inherit;
+  text-decoration: none;
+}
+#lectionary a:hover {
+  text-decoration: underline;
+}
+#lectionary .text-center {
+  text-align: center;
+}
+#lectionary header {
+  display: flex;
+  position: relative;
+  color: white;
+  background-color: #57998f;
+  padding: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+#lectionary header span {
+  margin-right: 1em;
+}
+#lectionary header select {
+  display: inline-block;
+  font-size: 1em;
+  padding: 0.2em 1em;
+}
+@media (max-width: 768px) {
+  #lectionary header select {
+    border: 1px solid #273655;
+    background-color: white;
+  }
+}
+#lectionary header .download {
+  margin-left: auto;
+}
+#lectionary header .download .icon {
+  width: 30px;
+  height: auto;
+}
+#lectionary header .download:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#lectionary header .download .down-link {
+  display: inline-block;
+  padding: 0.2em;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+#lectionary .header {
+  background-color: #252a37 !important;
+  color: white;
+  display: flex;
+}
+#lectionary .header > div {
+  padding: 0.4em;
+  text-align: center;
+  flex-grow: 1;
+}
+#lectionary .header .month-header {
+  flex-basis: 80px;
+}
+#lectionary .header .day-header {
+  flex-basis: 100px;
+}
+#lectionary .header .event-header {
+  flex-basis: 300px;
+}
+#lectionary .header .bible-header {
+  flex-basis: calc(100% - 440px);
+}
+@media (max-width: 768px) {
+  #lectionary .header {
+    display: none !important;
+  }
+}
+#lectionary .wrap {
+  display: flex;
+  border-bottom: 4px solid #eee;
+  background-color: #bbd7ca;
+}
+#lectionary .wrap.footer {
+  border-bottom: 0;
+}
+#lectionary .wrap.footer footer {
+  background-color: #1e2430;
+  width: 100%;
+  text-align: center;
+  padding: 0.4em;
+  color: white;
+  font-size: 90%;
+  font-weight: 300;
+}
+#lectionary .wrap:last-child:not(.footer) {
+  border-bottom: 0;
+}
+@media (max-width: 768px) {
+  #lectionary .wrap {
+    flex-direction: column;
+  }
+}
+#lectionary .wrap .month {
+  flex-basis: 80px;
+  text-align: center;
+  align-self: center;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  #lectionary .wrap .month {
+    flex-basis: 2em;
+  }
+}
+#lectionary .wrap .event-wrap {
+  background-color: white;
+  flex-basis: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+}
+#lectionary .wrap .event-wrap .event {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+#lectionary .wrap .event-wrap .event > div, #lectionary .wrap .event-wrap .event > ul {
+  padding: 0.5em;
+}
+#lectionary .wrap .event-wrap .event:last-child {
+  border-bottom: 0;
+}
+#lectionary .wrap .event-wrap .event.stretch {
+  flex: none;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center !important;
+}
+@media (max-width: 768px) {
+  #lectionary .wrap .event-wrap .event {
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-bottom-color: #273655;
+  }
+}
+#lectionary .wrap .event-wrap .event .date {
+  flex: none;
+  width: 100px;
+  text-align: center;
+  border-right: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  #lectionary .wrap .event-wrap .event .date {
+    flex-basis: 100%;
+    background-color: #c6e0f4;
+    width: initial;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 700;
+  }
+}
+#lectionary .wrap .event-wrap .event .color {
+  flex: none;
+  width: 300px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-right: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  #lectionary .wrap .event-wrap .event .color {
+    width: initial;
+    border-right: 0;
+    border-bottom: 1px solid #eee;
+    justify-content: center;
+  }
+}
+#lectionary .wrap .event-wrap .event ul {
+  flex-basis: 50%;
+  list-style-type: none;
+  padding-left: 0.5em;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: keep-all;
+  flex-direction: column;
+}
+#lectionary .bg-white {
+  background-color: white;
+}
+#lectionary .bg-red {
+  background-color: #f95b65;
+  color: white;
+}
+#lectionary .bg-purple {
+  background-color: #7E43B2;
+  color: white;
+}
+#lectionary .bg-green {
+  background-color: #66C36B;
+  color: white;
+}
+#lectionary .bg-black {
+  background-color: black;
+  color: white;
+}
+
+#gotop {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gotop a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gotop .feather {
+  color: white;
+}
+
+/*# sourceMappingURL=/app.c328ef1a.css.map */

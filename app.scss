@@ -43,6 +43,13 @@ body {
 		text-align:center;
 	}
 
+	h1 {
+		font-size: 1.8rem;
+		@media screen and (max-width: 480px) {
+			font-size: 1.4rem;
+		}
+	}
+
 	header {
 		display:flex;
 		position:relative;
@@ -59,6 +66,8 @@ body {
 			display:inline-block;
 			font-size:1em;
 			padding:.2em 1em;
+			min-width: 90px;
+			height: 32px;
 			@media ( max-width:768px ) {
 				border:1px solid #273655;
 				background-color:white;
@@ -74,6 +83,10 @@ body {
 				content:'';
 				display:block;
 				clear:both;
+			}
+			.download-title {
+				text-align:center;
+				margin-bottom: .5em;
 			}
 			.down-link {
 				display:inline-block;

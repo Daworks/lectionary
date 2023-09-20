@@ -41,7 +41,7 @@
     <h1 class="text-center">2024년 교회력에 따른 성서일과</h1>
     <header>
         <span>월 이동</span>
-        <select id="month-selector" onchange="goMonth(this.value)">
+        <select id="month-selector" onchange="goMonth(this.value)" aria-label="month-selector">
             <option value="">월 선택</option>
             <option value="0">1월</option>
             <option value="1">2월</option>
@@ -57,6 +57,7 @@
             <option value="11">12월</option>
         </select>
         <div class="download">
+            <div class="download-title text-center">2023년도 성서일과</div>
             <a href="./2023lectionary.pdf" class="down-link" title="PDF 파일로 다운로드">
                 <img src="./asset/image/pdf-icon.png" alt="pdf" class="icon">
             </a>

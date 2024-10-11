@@ -42,6 +42,14 @@ body {
 #lectionary .text-center {
   text-align: center;
 }
+#lectionary h1 {
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 480px) {
+  #lectionary h1 {
+    font-size: 1.4rem;
+  }
+}
 #lectionary header {
   display: flex;
   position: relative;
@@ -59,6 +67,8 @@ body {
   display: inline-block;
   font-size: 1em;
   padding: 0.2em 1em;
+  min-width: 90px;
+  height: 32px;
 }
 @media (max-width: 768px) {
   #lectionary header select {
@@ -77,6 +87,10 @@ body {
   content: "";
   display: block;
   clear: both;
+}
+#lectionary header .download .download-title {
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 #lectionary header .download .down-link {
   display: inline-block;

@@ -1,6 +1,5 @@
 import './app.scss';
-
-window.feather = require( 'feather-icons' );
+import feather from 'feather-icons';
 
 window.goMonth = function ( index ) {
 	let tgs = document.querySelectorAll( '.month' );

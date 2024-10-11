@@ -9,16 +9,19 @@ export default defineConfig({
         assetsDir: 'asset',
         rollupOptions: {
             input: {
-                main: [resolve(__dirname, 'index.html')],
+                main: resolve('index.html'),
             },
         },
     },
     resolve: {
         alias: {
-            '@': resolve(__dirname, './'),
+            '@': resolve('./'),
         },
     },
     css: {
         devSourcemap: true
+    },
+    optimizeDeps: {
+        include: ['app.js', 'app.scss']
     }
 })

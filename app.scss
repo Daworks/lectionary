@@ -1,26 +1,5 @@
-@font-face {
-	font-family: 'Spoqa Han Sans Neo';
-	font-weight: 700;
-	src: local('Spoqa Han Sans Neo Bold'),
-	url('/asset/fonts/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
-	url('/asset/fonts/SpoqaHanSansNeo-Bold.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Spoqa Han Sans Neo';
-	font-weight: 400;
-	src: local('Spoqa Han Sans Neo Regular'),
-	url('/asset/fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
-	url('/asset/fonts/SpoqaHanSansNeo-Regular.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'Spoqa Han Sans Neo';
-	font-weight: 300;
-	src: local('Spoqa Han Sans Neo Light'),
-	url('/asset/fonts/SpoqaHanSansNeo-Light.woff2') format('woff2'),
-	url('/asset/fonts/SpoqaHanSansNeo-Light.woff') format('woff');
-}
+// SUIT 폰트 CDN 사용
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css');
 
 body {
 	margin:0;
@@ -46,7 +25,7 @@ body {
 	max-width:1024px;
 	color: #252a37;
 	background-color:white;
-	font-family:'Spoqa Han Sans Neo', sans-serif;
+	font-family:'SUIT', sans-serif;
 	font-size:14px;
 	font-weight:400;
 	position:relative;

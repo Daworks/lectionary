@@ -9,15 +9,14 @@ This is a Korean Lectionary (성서일과) web application that displays liturgi
 ## Development Commands
 
 ### Build and Development
-- `npm run dev` - Start Vite development server for local development
+- `npm run dev` - Start Vite development server for local development (default port: 5173)
 - `npm run build` - Build for production (outputs to `dist/` directory)
 - No test scripts are currently configured
 
 ### Package Management
-The project uses multiple package managers:
-- `package.json` with npm/yarn
-- `pnpm-lock.yaml` indicates pnpm usage
-- `yarn.lock` indicates yarn usage
+Multiple package managers are present in the repository. Use pnpm for consistency:
+- Primary: `pnpm` (pnpm-lock.yaml present)
+- Also available: npm, yarn (yarn.lock present)
 
 ## Architecture
 
@@ -28,18 +27,20 @@ The project uses multiple package managers:
 - Single-page application with `index.html` as entry point
 
 ### File Structure
-- `index.html` - Main HTML template with embedded Korean lectionary content
-- `app.js` - Main JavaScript module handling:
+- `index.html` - Main HTML template with embedded Korean lectionary content for 2026
+- `app.js` - Main JavaScript module (34 lines):
   - Feather icons initialization
-  - Month navigation (`goMonth()` function)
-  - Liturgical color styling (흰색/녹색/보라색/적색/흑색)
+  - Month navigation (`goMonth()` function) - smooth scrolls to selected month
+  - Liturgical color styling - dynamically applies CSS classes based on Korean text (흰색/녹색/보라색/적색/흑색)
   - Smooth scrolling functionality
-- `app.scss` - Main stylesheet with:
+- `app.scss` - Main stylesheet:
   - Korean web font (Spoqa Han Sans Neo) definitions
   - Responsive layout for lectionary display
   - Liturgical color classes (bg-white, bg-green, bg-purple, bg-red, bg-black)
+- `vite.config.mjs` - Vite configuration with path aliases and build settings
 - `dist/` - Production build output directory
 - `asset/` - Static assets (fonts, images)
+- Historical files: `2020.html`, `kmc.html`, `index2025.html`, PDF/HWP documents (2020-2023)
 
 ### Key Features
 - **Korean Localization**: All content and UI in Korean
@@ -57,8 +58,10 @@ The built application (`dist/index.html`) can be served as a static website. The
 
 ## Important Notes
 
-- Content is provided by 도서출판KMC and should be treated as copyrighted material
-- The project generates annual lectionary schedules (currently 2025년/2025 year)
-- Historical versions exist as separate HTML files (2020.html, kmc.html) and PDF documents
-- Uses ES modules (`"type": "module"` in package.json)
-- Google Analytics integration is configured in the HTML
+- **Content Copyright**: All lectionary content is provided by 도서출판KMC and should be treated as copyrighted material
+- **Current Year**: The active file is `index.html` displaying 2026 lectionary schedule
+- **Historical Versions**: Previous years available as separate files (2020.html, index2025.html, kmc.html) and PDF/HWP documents
+- **Year Updates**: When updating for new years, the main `index.html` should be updated with new lectionary data
+- **ES Modules**: Uses ES module syntax (`"type": "module"` in package.json)
+- **Analytics**: Google Analytics (G-XHJTK635H0) and Google Tag Manager (GTM-NDKNX4M) are integrated
+- **Metadata**: OpenGraph and Twitter Card metadata configured for social sharing

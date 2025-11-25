@@ -3,7 +3,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
     root: './',
-    base: '',
+    base: '', // Relative base path for subdirectory support
     build: {
         outDir: 'dist',
         assetsDir: 'asset',

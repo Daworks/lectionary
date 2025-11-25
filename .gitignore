@@ -2,4 +2,8 @@
 node_modules
 .cache
 .idea
+.claude
+nginx-multiversion.conf
+DEPLOY_GUIDE.md
+
 
